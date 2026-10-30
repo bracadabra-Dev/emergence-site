@@ -103,7 +103,7 @@ function emergence_labels($lang) {
             'physical' => 'Physique',
             'mental' => 'Mental',
             'schools' => 'Écoles',
-            'primary' => 'Section primaire',
+            'primary' => 'Primaire',
             'secondary' => 'Secondaire',
             'admissions' => 'Admissions',
             'apply' => 'Candidater',
@@ -169,6 +169,9 @@ function emergence_header($ctx, $active) {
     $fr_current = $ctx['lang'] === 'fr' ? ' aria-current="true"' : '';
     $home_current = $active === 'home' ? ' aria-current="page"' : '';
     $primary_current = $active === 'primary' ? ' aria-current="page"' : '';
+    $secondary_current = $active === 'secondary' ? ' aria-current="page"' : '';
+    $primary_url = $page . '/primary.php';
+    $secondary_url = $page . '/secondary.php';
     ?>
     <a class="skip" href="#content"><?php echo e($n['skip']); ?></a>
     <header class="nav">
@@ -182,21 +185,11 @@ function emergence_header($ctx, $active) {
             </a>
             <nav class="nav-links" aria-label="<?php echo e($n['brand']); ?>">
                 <a href="<?php echo e($home); ?>"<?php echo $home_current; ?>><?php echo e($n['home']); ?></a>
-                <div class="menu">
-                    <a class="menu-label" href="<?php echo e($hash); ?>#academic"><?php echo e($n['excellence']); ?> <span class="caret" aria-hidden="true"></span></a>
-                    <div class="menu-panel">
-                        <a href="<?php echo e($hash); ?>#academic"><?php echo e($n['academic']); ?></a>
-                        <a href="<?php echo e($hash); ?>#physical"><?php echo e($n['physical']); ?></a>
-                        <a href="<?php echo e($hash); ?>#mental"><?php echo e($n['mental']); ?></a>
-                    </div>
-                </div>
-                <div class="menu">
-                    <a class="menu-label" href="<?php echo e($page); ?>/primary.php"><?php echo e($n['schools']); ?> <span class="caret" aria-hidden="true"></span></a>
-                    <div class="menu-panel">
-                        <a href="<?php echo e($page); ?>/primary.php"<?php echo $primary_current; ?>><?php echo e($n['primary']); ?></a>
-                        <a href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($n['secondary']); ?></a>
-                    </div>
-                </div>
+                <a href="<?php echo e($primary_url); ?>"<?php echo $primary_current; ?>><?php echo e($n['primary']); ?></a>
+                <a href="<?php echo e($secondary_url); ?>"<?php echo $secondary_current; ?>><?php echo e($n['secondary']); ?></a>
+                <a href="<?php echo e($hash); ?>#academic"><?php echo e($n['academic']); ?></a>
+                <a href="<?php echo e($hash); ?>#physical"><?php echo e($n['physical']); ?></a>
+                <a href="<?php echo e($hash); ?>#mental"><?php echo e($n['mental']); ?></a>
                 <div class="menu">
                     <a class="menu-label" href="<?php echo e($page); ?>/admissions.php"><?php echo e($n['admissions']); ?> <span class="caret" aria-hidden="true"></span></a>
                     <div class="menu-panel">
@@ -205,8 +198,6 @@ function emergence_header($ctx, $active) {
                         <a href="<?php echo e($page); ?>/documents.php"><?php echo e($n['documents']); ?></a>
                     </div>
                 </div>
-                <a href="<?php echo e($page); ?>/news.php"><?php echo e($n['news']); ?></a>
-                <a href="<?php echo e($page); ?>/gallery.php"><?php echo e($n['gallery']); ?></a>
                 <a href="<?php echo e($page); ?>/contact.php"><?php echo e($n['contact']); ?></a>
                 <div class="langs">
                     <a class="lang" href="<?php echo e($path); ?>?lang=en" hreflang="en" lang="en" data-set-lang="en"<?php echo $en_current; ?>>EN</a>
@@ -219,13 +210,12 @@ function emergence_header($ctx, $active) {
                 </summary>
                 <div class="drawer-panel">
                     <a href="<?php echo e($home); ?>"<?php echo $home_current; ?>><?php echo e($n['home']); ?></a>
+                    <a href="<?php echo e($primary_url); ?>"<?php echo $primary_current; ?>><?php echo e($n['primary']); ?></a>
+                    <a href="<?php echo e($secondary_url); ?>"<?php echo $secondary_current; ?>><?php echo e($n['secondary']); ?></a>
                     <p class="drawer-label"><?php echo e($n['excellence']); ?></p>
                     <a href="<?php echo e($hash); ?>#academic"><?php echo e($n['academic']); ?></a>
                     <a href="<?php echo e($hash); ?>#physical"><?php echo e($n['physical']); ?></a>
                     <a href="<?php echo e($hash); ?>#mental"><?php echo e($n['mental']); ?></a>
-                    <p class="drawer-label"><?php echo e($n['schools']); ?></p>
-                    <a href="<?php echo e($page); ?>/primary.php"<?php echo $primary_current; ?>><?php echo e($n['primary']); ?></a>
-                    <a href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($n['secondary']); ?></a>
                     <p class="drawer-label"><?php echo e($n['admissions']); ?></p>
                     <a href="<?php echo e($page); ?>/admissions.php"><?php echo e($n['apply']); ?></a>
                     <a href="<?php echo e($page); ?>/fees.php"><?php echo e($n['fees']); ?></a>
@@ -262,7 +252,9 @@ function emergence_footer($ctx, $wa) {
                     <ul>
                         <li><a href="<?php echo e($page); ?>/index.php"><?php echo e($n['home']); ?></a></li>
                         <li><a href="<?php echo e($page); ?>/primary.php"><?php echo e($n['primary']); ?></a></li>
-                        <li><a href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($n['secondary']); ?></a></li>
+                        <li><a href="<?php echo e($page); ?>/secondary.php"><?php echo e($n['secondary']); ?></a></li>
+                        <li><a href="<?php echo e($page); ?>/news.php"><?php echo e($n['news']); ?></a></li>
+                        <li><a href="<?php echo e($page); ?>/gallery.php"><?php echo e($n['gallery']); ?></a></li>
                         <li><a href="<?php echo e($page); ?>/admissions.php"><?php echo e($n['admissions']); ?></a></li>
                         <li><a href="<?php echo e($page); ?>/fees.php"><?php echo e($n['fees']); ?></a></li>
                         <li><a href="<?php echo e($page); ?>/documents.php"><?php echo e($n['documents']); ?></a></li>

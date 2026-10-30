@@ -115,10 +115,11 @@ h1, h2, h3 {
 .lang {
   color: var(--white);
   text-decoration: none;
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   font-weight: 600;
-  padding: 8px 9px;
+  padding: 8px 8px;
   border-radius: 8px;
+  white-space: nowrap;
 }
 
 .nav-links > a:hover,
@@ -530,6 +531,9 @@ h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.7rem); max-width: 18ch; }
 
 .campus-card h3 { margin: 0 0 6px; color: var(--blue); }
 .campus-card p { margin: 0; }
+
+.ticks { margin: 8px 0 0; padding-left: 1.15rem; }
+.ticks li { margin: 0.35rem 0; }
 
 @media (max-width: 1180px) {
   .nav-links { display: none; }

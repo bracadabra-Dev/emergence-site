@@ -345,7 +345,7 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" imagesrcset="<?php echo e($img); ?>/hero-sm.webp 800w, <?php echo e($img); ?>/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=1">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=2">
     <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=2">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
@@ -394,7 +394,7 @@ $schema = array(
                 <p class="kicker"><?php echo e($t['story_kicker']); ?></p>
                 <h2><?php echo e($t['story_title']); ?></h2>
                 <p><?php echo e($t['story_p1']); ?></p>
-                <p><?php echo e($t['story_before']); ?><a href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($t['story_link']); ?></a><?php echo e($t['story_after']); ?></p>
+                <p><?php echo e($t['story_before']); ?><a href="<?php echo e($page); ?>/secondary.php"><?php echo e($t['story_link']); ?></a><?php echo e($t['story_after']); ?></p>
                 <p class="note"><?php echo e($t['story_note']); ?></p>
             </div>
             <figure class="frame">
