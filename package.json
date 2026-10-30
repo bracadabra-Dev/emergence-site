@@ -1,0 +1,21 @@
+{
+  "name": "emergence-schools",
+  "version": "1.0.0",
+  "description": "Emergence Schools Website - Primary & Secondary Excellence in Douala",
+  "scripts": {
+    "build-css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify",
+    "watch-css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build-js": "terser assets/js/main.js assets/js/calculator.js --compress --mangle --output assets/js/bundle.min.js",
+    "watch-js": "onchange 'assets/js/*.js' -- npm run build-js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0",
+    "terser": "^5.44.1"
+  },
+  "dependencies": {
+    "flowbite": "^2.0.0"
+  }
+}
