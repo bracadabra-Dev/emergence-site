@@ -1,0 +1,16 @@
+Drop-in portraits. No code change. Square photographs are cropped to the face.
+
+Already published:
+  terence.webp    Mr Ebai Terence
+  dany.webp       Mme Dany Kengne Michelle
+  ningyi.webp     Mme Ningyi Fernande Dorothee
+  myriam.webp     Mme Tchigheu Noubissi Epse Djeumeni Myriam
+  blessing.webp   Mme Tim Blessing Kein
+  hermine.webp    Mme Simon Hermine
+
+Still waiting for a photograph:
+  mbofa.webp           Mme Mbofa Regina Nchinda
+  nkwelle-ephraim.webp Mr Nkwelle Ephraim
+                       (headmaster.webp in assets/images/primary/leadership/ also works)
+
+webp, jpg, jpeg or png. The next page load picks the file up.

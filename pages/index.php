@@ -1,0 +1,372 @@
+<?php
+/**
+ * Emergence Schools — group homepage.
+ *
+ * Replaces the CMS homepage when this file is uploaded as pages/index.php.
+ * News, the gallery and the full staff list stay on their own pages.
+ * PHP 7.4. No build step, no database.
+ */
+
+require_once dirname(__DIR__) . '/includes/site.php';
+
+$boot = emergence_boot('/pages/index.php');
+$lang = $boot['lang'];
+$root = $boot['root'];
+$img = $boot['img'];
+$page = $boot['page'];
+$origin = $boot['origin'];
+$canonical = $boot['canonical'];
+
+$copy = array(
+    'en' => array(
+        'meta_title' => 'Emergence Schools — Douala',
+        'meta_desc' => 'Nursery, primary and secondary in Douala. Academic, physical and mental excellence at Bonapriso and Logbessou since 1995.',
+        'hero_kicker' => 'Nursery, primary and secondary · Douala',
+        'hero_title' => 'Academic, physical and mental excellence, since 1995.',
+        'hero_lede' => 'Two campuses in Douala. Children learn in English and French, move every week, and grow up in a school their parents can actually reach.',
+        'hero_alt' => 'Young children at a kindergarten graduation, in school uniform.',
+        'primary_btn' => 'Primary section',
+        'secondary_btn' => 'Secondary',
+        'apply' => 'Apply',
+        'wa_text' => 'Hello Emergence Schools, I would like to ask about a place.',
+        'academic_kicker' => 'Academic',
+        'academic_title' => 'The work of the classroom.',
+        'academic_text' => 'Nursery opens bilingual. Primary then follows a French path or an Anglo-Saxon path, and secondary continues both. In the younger classes, about sixty percent of the time is classroom work and forty percent is practical. Groups stay small enough for a teacher to know the child.',
+        'academic_alt' => 'A visit along the primary corridor.',
+        'academic_cap' => 'The primary corridor.',
+        'paths' => 'Primary pathways',
+        'physical_kicker' => 'Physical',
+        'physical_title' => 'A body that is part of the timetable.',
+        'physical_text' => 'Classic dance, karate, ballet and sport sit in the week, not after it. The younger classes keep a cultural day. Buses collect children from across Douala so the day can start on time.',
+        'physical_alt' => 'Children dancing in traditional dress on cultural day.',
+        'physical_cap' => 'Cultural day for the younger classes.',
+        'life' => 'Life in primary',
+        'mental_kicker' => 'Mental',
+        'mental_title' => 'A child who is known.',
+        'mental_text' => 'The school’s line is Discipline – Hardwork – Success. Pupils hold offices of their own, from prime minister to health and communication. Parents sit with teachers twice a year. A nurse is on both campuses, and a guard is there through the day and the night.',
+        'mental_alt' => 'Staff and children together at a school celebration.',
+        'mental_cap' => 'A school celebration.',
+        'care' => 'Care in primary',
+        'schools_kicker' => 'The two schools',
+        'schools_title' => 'One group, from the first classroom to secondary.',
+        'primary_card' => 'Primary',
+        'primary_card_text' => 'Nursery through Class 6 and CM2, at Bonapriso and Logbessou.',
+        'secondary_card' => 'Secondary',
+        'secondary_card_text' => 'The secondary school, its pathways and its exam results.',
+        'staff_kicker' => 'People',
+        'staff_title' => 'The people who keep the schools.',
+        'staff_intro' => 'Names and roles as the school publishes them. Initials stand in where a portrait is not ready yet.',
+        'all_staff' => 'Full staff list',
+        'visit_kicker' => 'Visit',
+        'visit_title' => 'Bonapriso and Logbessou.',
+        'bona_text' => 'Near Paroisse Dominique Savio, since September 1995.',
+        'log_text' => '10th Avenue, since September 2006.',
+        'hours' => 'Monday to Friday, 8:00–17:00',
+        'roles' => array(
+            'Manager',
+            'Executive Assistant',
+            'Accountant',
+            'Administrative Assistant',
+            'Vice Principal, French Section',
+            'Vice Principal, Anglophone Section',
+            'Principal, Primary Section',
+            'Vice Principal, Primary Section',
+        ),
+        'names' => array(
+            'Mr Ebai Terence',
+            'Mme Dany Kengne Michelle',
+            'Mme Ningyi Fernande Dorothee',
+            'Mme Mbofa Regina Nchinda',
+            'Mme Tchigheu Noubissi Epse Djeumeni Myriam',
+            'Mme Tim Blessing Kein',
+            'Mr Nkwelle Ephraim',
+            'Mme Simon Hermine',
+        ),
+    ),
+    'fr' => array(
+        'meta_title' => 'École Emergence — Douala',
+        'meta_desc' => 'Maternelle, primaire et secondaire à Douala. Excellence académique, physique et mentale à Bonapriso et à Logbessou, depuis 1995.',
+        'hero_kicker' => 'Maternelle, primaire et secondaire · Douala',
+        'hero_title' => 'L’excellence académique, physique et mentale, depuis 1995.',
+        'hero_lede' => 'Deux campus à Douala. Les enfants apprennent en anglais et en français, bougent chaque semaine, et grandissent dans une école que les parents peuvent joindre.',
+        'hero_alt' => 'De jeunes enfants en uniforme, lors d’une graduation de maternelle.',
+        'primary_btn' => 'Section primaire',
+        'secondary_btn' => 'Secondaire',
+        'apply' => 'Candidater',
+        'wa_text' => 'Bonjour École Emergence, je voudrais demander une place.',
+        'academic_kicker' => 'Académique',
+        'academic_title' => 'Le travail de la classe.',
+        'academic_text' => 'La maternelle s’ouvre bilingue. Le primaire suit ensuite une voie française ou une voie anglo-saxonne, et le secondaire continue les deux. Chez les plus jeunes, environ soixante pour cent du temps est en classe et quarante pour cent est pratique. Les groupes restent assez courts pour que l’enseignant connaisse l’enfant.',
+        'academic_alt' => 'Une visite dans le couloir du primaire.',
+        'academic_cap' => 'Le couloir du primaire.',
+        'paths' => 'Parcours du primaire',
+        'physical_kicker' => 'Physique',
+        'physical_title' => 'Un corps qui fait partie de l’horaire.',
+        'physical_text' => 'La danse classique, le karaté, le ballet et le sport sont dans la semaine, pas après elle. Les plus jeunes gardent une journée culturelle. Les bus prennent les enfants dans Douala pour que la journée commence à l’heure.',
+        'physical_alt' => 'Des enfants dansent en tenue traditionnelle lors de la journée culturelle.',
+        'physical_cap' => 'Journée culturelle des plus jeunes classes.',
+        'life' => 'La vie au primaire',
+        'mental_kicker' => 'Mental',
+        'mental_title' => 'Un enfant que l’on connaît.',
+        'mental_text' => 'La ligne de l’école est Discipline – Hardwork – Success. Les élèves tiennent leurs propres fonctions, du premier ministre à la santé et à la communication. Les parents s’assoient avec les enseignants deux fois par an. Une infirmière est sur les deux campus, et un gardien est là le jour et la nuit.',
+        'mental_alt' => 'Le personnel et les enfants ensemble lors d’une fête de l’école.',
+        'mental_cap' => 'Une fête de l’école.',
+        'care' => 'L’accompagnement au primaire',
+        'schools_kicker' => 'Les deux écoles',
+        'schools_title' => 'Un seul groupe, de la première classe au secondaire.',
+        'primary_card' => 'Primaire',
+        'primary_card_text' => 'De la maternelle à la Class 6 et au CM2, à Bonapriso et à Logbessou.',
+        'secondary_card' => 'Secondaire',
+        'secondary_card_text' => 'Le secondaire, ses parcours et ses résultats d’examens.',
+        'staff_kicker' => 'Les personnes',
+        'staff_title' => 'Celles et ceux qui tiennent les écoles.',
+        'staff_intro' => 'Noms et fonctions tels que l’école les publie. Les initiales tiennent lieu de portrait tant que la photo n’est pas prête.',
+        'all_staff' => 'Toute l’équipe',
+        'visit_kicker' => 'Venir',
+        'visit_title' => 'Bonapriso et Logbessou.',
+        'bona_text' => 'Près de la paroisse Dominique Savio, depuis septembre 1995.',
+        'log_text' => '10th Avenue, depuis septembre 2006.',
+        'hours' => 'Lundi à vendredi, 8 h – 17 h',
+        'roles' => array(
+            'Directeur',
+            'Assistante de direction',
+            'Comptable',
+            'Assistante administrative',
+            'Vice-principale, section francophone',
+            'Vice-principale, section anglophone',
+            'Directeur, section primaire',
+            'Directrice adjointe, section primaire',
+        ),
+        'names' => array(
+            'M. Ebai Terence',
+            'Mme Dany Kengne Michelle',
+            'Mme Ningyi Fernande Dorothee',
+            'Mme Mbofa Regina Nchinda',
+            'Mme Tchigheu Noubissi Epse Djeumeni Myriam',
+            'Mme Tim Blessing Kein',
+            'M. Nkwelle Ephraim',
+            'Mme Simon Hermine',
+        ),
+    ),
+);
+
+$t = $copy[$lang];
+$wa = 'https://wa.me/237699353787?text=' . rawurlencode($t['wa_text']);
+
+$files = array(
+    array('terence'),
+    array('dany'),
+    array('ningyi'),
+    array('mbofa', 'mbofa-regina'),
+    array('myriam'),
+    array('blessing'),
+    array('nkwelle-ephraim', 'headmaster', 'head-master'),
+    array('headmistress', 'head-mistress', 'simon-hermine', 'hermine'),
+);
+$initials = array('ET', 'DK', 'NF', 'MN', 'TM', 'BK', 'NE', 'SH');
+$people = array();
+foreach ($files as $i => $names) {
+    $people[] = array(
+        'name' => $t['names'][$i],
+        'role' => $t['roles'][$i],
+        'photo' => emergence_photo($root, $names),
+        'initials' => $initials[$i],
+    );
+}
+
+$schema = array(
+    '@context' => 'https://schema.org',
+    '@type' => 'EducationalOrganization',
+    'name' => 'Emergence Schools',
+    'url' => $canonical,
+    'email' => 'dany.kengne@emergenceschools.org',
+    'telephone' => array('+237675261440', '+237676332046'),
+    'slogan' => 'Discipline – Hardwork – Success',
+    'address' => array(
+        array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => 'Near Paroisse Dominique Savio, Bonapriso',
+            'addressLocality' => 'Douala',
+            'addressCountry' => 'CM',
+        ),
+        array(
+            '@type' => 'PostalAddress',
+            'streetAddress' => '10th Avenue, Logbessou',
+            'addressLocality' => 'Douala',
+            'addressCountry' => 'CM',
+        ),
+    ),
+);
+?>
+<!DOCTYPE html>
+<html lang="<?php echo $lang === 'fr' ? 'fr' : 'en'; ?>">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><?php echo e($t['meta_title']); ?></title>
+    <meta name="description" content="<?php echo e($t['meta_desc']); ?>">
+    <link rel="canonical" href="<?php echo e($canonical); ?>">
+    <meta name="theme-color" content="#283783">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?php echo e($t['meta_title']); ?>">
+    <meta property="og:description" content="<?php echo e($t['meta_desc']); ?>">
+    <meta property="og:url" content="<?php echo e($canonical); ?>">
+    <meta property="og:image" content="<?php echo e($origin . $img . '/hero.webp'); ?>">
+    <meta property="og:locale" content="<?php echo $lang === 'fr' ? 'fr_FR' : 'en_GB'; ?>">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="<?php echo e($img); ?>/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="<?php echo e($img); ?>/hero-sm.webp" fetchpriority="high">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=1">
+    <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
+</head>
+<body data-lang-api="<?php echo e($root); ?>/api/language.php">
+<?php emergence_header($boot, 'home'); ?>
+
+    <section class="home-hero" aria-label="<?php echo e($t['hero_kicker']); ?>">
+        <img
+            src="<?php echo e($img); ?>/hero-sm.webp"
+            srcset="<?php echo e($img); ?>/hero-sm.webp 800w, <?php echo e($img); ?>/hero.webp 1600w"
+            sizes="100vw"
+            width="1600"
+            height="1200"
+            alt="<?php echo e($t['hero_alt']); ?>"
+            fetchpriority="high"
+            decoding="async">
+    </section>
+
+    <div class="wrap">
+        <div class="hero-card" id="content">
+            <p class="kicker"><?php echo e($t['hero_kicker']); ?></p>
+            <h1><?php echo e($t['hero_title']); ?></h1>
+            <p class="lede"><?php echo e($t['hero_lede']); ?></p>
+            <div class="actions">
+                <a class="btn btn-yellow" href="<?php echo e($page); ?>/primary.php"><?php echo e($t['primary_btn']); ?></a>
+                <a class="btn btn-blue" href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($t['secondary_btn']); ?></a>
+                <a class="btn btn-line" href="<?php echo e($page); ?>/admissions.php"><?php echo e($t['apply']); ?></a>
+            </div>
+            <p class="motto">Discipline – Hardwork – Success</p>
+        </div>
+    </div>
+
+    <section class="band" id="academic">
+        <div class="wrap pillar">
+            <figure>
+                <img src="<?php echo e($img); ?>/corridor.webp" width="1100" height="619" alt="<?php echo e($t['academic_alt']); ?>" loading="lazy" decoding="async">
+                <figcaption><?php echo e($t['academic_cap']); ?></figcaption>
+            </figure>
+            <div class="pillar-copy">
+                <p class="kicker"><?php echo e($t['academic_kicker']); ?></p>
+                <h2><?php echo e($t['academic_title']); ?></h2>
+                <p><?php echo e($t['academic_text']); ?></p>
+                <div class="actions">
+                    <a class="btn btn-line" href="<?php echo e($page); ?>/primary.php#pathways"><?php echo e($t['paths']); ?></a>
+                    <a class="btn btn-line" href="<?php echo e($page); ?>/academics.php#secondary"><?php echo e($t['secondary_btn']); ?></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band band-alt" id="physical">
+        <div class="wrap pillar reverse">
+            <figure>
+                <img src="<?php echo e($img); ?>/culture.webp" width="1100" height="825" alt="<?php echo e($t['physical_alt']); ?>" loading="lazy" decoding="async">
+                <figcaption><?php echo e($t['physical_cap']); ?></figcaption>
+            </figure>
+            <div class="pillar-copy">
+                <p class="kicker"><?php echo e($t['physical_kicker']); ?></p>
+                <h2><?php echo e($t['physical_title']); ?></h2>
+                <p><?php echo e($t['physical_text']); ?></p>
+                <div class="actions">
+                    <a class="btn btn-line" href="<?php echo e($page); ?>/primary.php#life"><?php echo e($t['life']); ?></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band" id="mental">
+        <div class="wrap pillar">
+            <figure>
+                <img src="<?php echo e($img); ?>/celebration.webp" width="1100" height="825" alt="<?php echo e($t['mental_alt']); ?>" loading="lazy" decoding="async">
+                <figcaption><?php echo e($t['mental_cap']); ?></figcaption>
+            </figure>
+            <div class="pillar-copy">
+                <p class="kicker"><?php echo e($t['mental_kicker']); ?></p>
+                <h2><?php echo e($t['mental_title']); ?></h2>
+                <p><?php echo e($t['mental_text']); ?></p>
+                <div class="actions">
+                    <a class="btn btn-line" href="<?php echo e($page); ?>/primary.php#care"><?php echo e($t['care']); ?></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="band band-alt" id="schools">
+        <div class="wrap">
+            <p class="kicker"><?php echo e($t['schools_kicker']); ?></p>
+            <h2><?php echo e($t['schools_title']); ?></h2>
+            <div class="schools">
+                <a class="school-card" href="<?php echo e($page); ?>/primary.php">
+                    <strong><?php echo e($t['primary_card']); ?></strong>
+                    <span><?php echo e($t['primary_card_text']); ?></span>
+                </a>
+                <a class="school-card" href="<?php echo e($page); ?>/academics.php#secondary">
+                    <strong><?php echo e($t['secondary_card']); ?></strong>
+                    <span><?php echo e($t['secondary_card_text']); ?></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="band" id="staff">
+        <div class="wrap">
+            <p class="kicker"><?php echo e($t['staff_kicker']); ?></p>
+            <h2><?php echo e($t['staff_title']); ?></h2>
+            <p class="intro"><?php echo e($t['staff_intro']); ?></p>
+            <div class="people">
+                <?php foreach ($people as $person): ?>
+                    <article class="person">
+                        <div class="person-photo">
+                            <?php if ($person['photo'] !== ''): ?>
+                                <img src="<?php echo e($person['photo']); ?>" width="480" height="480" alt="" loading="lazy" decoding="async">
+                            <?php else: ?>
+                                <span class="mono" aria-hidden="true"><?php echo e($person['initials']); ?></span>
+                            <?php endif; ?>
+                        </div>
+                        <h3><?php echo e($person['name']); ?></h3>
+                        <p><?php echo e($person['role']); ?></p>
+                    </article>
+                <?php endforeach; ?>
+            </div>
+            <div class="actions">
+                <a class="btn btn-line" href="<?php echo e($page); ?>/staff.php"><?php echo e($t['all_staff']); ?></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="band band-alt" id="visit">
+        <div class="wrap">
+            <p class="kicker"><?php echo e($t['visit_kicker']); ?></p>
+            <h2><?php echo e($t['visit_title']); ?></h2>
+            <div class="campuses">
+                <article class="campus-card">
+                    <h3>Bonapriso</h3>
+                    <p><?php echo e($t['bona_text']); ?></p>
+                    <p><a href="tel:+237675261440">+237 675 261 440</a></p>
+                </article>
+                <article class="campus-card">
+                    <h3>Logbessou</h3>
+                    <p><?php echo e($t['log_text']); ?></p>
+                    <p><a href="tel:+237676332046">+237 676 332 046</a></p>
+                </article>
+            </div>
+            <p class="motto"><?php echo e($t['hours']); ?> · dany.kengne@emergenceschools.org</p>
+        </div>
+    </section>
+
+<?php emergence_footer($boot, $wa); ?>
+    <script src="<?php echo e($root); ?>/assets/js/primary.js?v=1" defer></script>
+</body>
+</html>
