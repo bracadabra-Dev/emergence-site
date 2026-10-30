@@ -47,8 +47,8 @@ $copy = array(
         'mental_kicker' => 'Mental',
         'mental_title' => 'A child who is known.',
         'mental_text' => 'The school’s line is Discipline – Hardwork – Success. In primary, pupils hold offices of their own and parents sit with teachers twice a year. In secondary, a counselling bureau follows each student toward a course and a university. A nurse is on both campuses.',
-        'mental_alt' => 'Staff and children together at a school celebration.',
-        'mental_cap' => 'A school celebration.',
+        'mental_alt' => 'Staff together on a school day, in school colours.',
+        'mental_cap' => 'Staff on a school day.',
         'care' => 'Care in primary',
         'schools_kicker' => 'The two schools',
         'schools_title' => 'One group, from the first classroom to secondary.',
@@ -72,8 +72,8 @@ $copy = array(
             'Administrative Assistant',
             'Vice Principal, French Section',
             'Vice Principal, Anglophone Section',
-            'Principal, Primary Section',
-            'Vice Principal, Primary Section',
+            'Headmaster, Primary Section',
+            'Headmistress, Primary Section',
         ),
         'names' => array(
             'Mr Ebai Terence',
@@ -115,8 +115,8 @@ $copy = array(
         'mental_kicker' => 'Mental',
         'mental_title' => 'Un enfant que l’on connaît.',
         'mental_text' => 'La ligne de l’école est Discipline – Hardwork – Success. Au primaire, les élèves tiennent leurs propres fonctions et les parents s’assoient avec les enseignants deux fois par an. Au secondaire, un bureau d’orientation suit chaque élève vers une filière et une université. Une infirmière est sur les deux campus.',
-        'mental_alt' => 'Le personnel et les enfants ensemble lors d’une fête de l’école.',
-        'mental_cap' => 'Une fête de l’école.',
+        'mental_alt' => 'Le personnel ensemble lors d’une journée d’école, en couleurs de l’école.',
+        'mental_cap' => 'Le personnel, un jour d’école.',
         'care' => 'L’accompagnement au primaire',
         'schools_kicker' => 'Les deux écoles',
         'schools_title' => 'Un seul groupe, de la première classe au secondaire.',
@@ -141,7 +141,7 @@ $copy = array(
             'Vice-principale, section francophone',
             'Vice-principale, section anglophone',
             'Directeur, section primaire',
-            'Directrice adjointe, section primaire',
+            'Directrice, section primaire',
         ),
         'names' => array(
             'M. Ebai Terence',
@@ -166,7 +166,7 @@ $files = array(
     array('mbofa', 'mbofa-regina'),
     array('myriam'),
     array('blessing'),
-    array('nkwelle-ephraim', 'headmaster', 'head-master'),
+    array('nkwelle-ephraim', 'nkwelle', 'kwelle', 'mr-kwelle', 'headmaster', 'head-master'),
     array('headmistress', 'head-mistress', 'simon-hermine', 'hermine'),
 );
 $initials = array('ET', 'DK', 'NF', 'MN', 'TM', 'BK', 'NE', 'SH');
@@ -313,7 +313,7 @@ $schema = array(
     <section class="band band-alt" id="mental">
         <div class="wrap pillar">
             <figure>
-                <img src="<?php echo e($img); ?>/celebration.webp" width="1100" height="825" alt="<?php echo e($t['mental_alt']); ?>" loading="lazy" decoding="async">
+                <img src="<?php echo e($img); ?>/medals.webp" width="1400" height="1050" alt="<?php echo e($t['mental_alt']); ?>" loading="lazy" decoding="async">
                 <figcaption><?php echo e($t['mental_cap']); ?></figcaption>
             </figure>
             <div class="pillar-copy">

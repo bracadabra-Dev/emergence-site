@@ -130,11 +130,11 @@ $copy = array(
         'bus_text' => 'Drivers are trained in-house. The fleet covers:',
         'lead_kicker' => 'Primary leadership',
         'lead_title' => 'At the head of the section.',
-        'lead_intro' => 'The primary principal and vice principal, as published by the school.',
+        'lead_intro' => 'The headmaster and headmistress of the primary section.',
         'head_name' => 'Mr Nkwelle Ephraim',
-        'head_role' => 'Principal, Primary Section',
+        'head_role' => 'Headmaster, Primary Section',
         'vice_name' => 'Mme Simon Hermine',
-        'vice_role' => 'Vice Principal, Primary Section',
+        'vice_role' => 'Headmistress, Primary Section',
         'fly_kicker' => 'This year’s flyer',
         'fly_title' => 'Nursery, primary and secondary, on one sheet.',
         'fly_intro' => 'The 2026 flyer for the Logbessou group. Open either version at full size.',
@@ -252,11 +252,11 @@ $copy = array(
         'bus_text' => 'Les chauffeurs sont formés par l’école. Le circuit couvre :',
         'lead_kicker' => 'Direction du primaire',
         'lead_title' => 'À la tête de la section.',
-        'lead_intro' => 'Le directeur et la directrice adjointe du primaire, tels que l’école les publie.',
+        'lead_intro' => 'Le directeur et la directrice de la section primaire.',
         'head_name' => 'M. Nkwelle Ephraim',
         'head_role' => 'Directeur de la section primaire',
         'vice_name' => 'Mme Simon Hermine',
-        'vice_role' => 'Directrice adjointe de la section primaire',
+        'vice_role' => 'Directrice de la section primaire',
         'fly_kicker' => 'Le dépliant de l’année',
         'fly_title' => 'Maternelle, primaire et secondaire, sur une feuille.',
         'fly_intro' => 'Le dépliant 2026 du groupe de Logbessou. Ouvrez l’une ou l’autre version en grand.',
@@ -281,7 +281,7 @@ $copy = array(
 
 $t = $copy[$lang];
 $wa = 'https://wa.me/237699353787?text=' . rawurlencode($t['wa_text']);
-$head_photo = emergence_photo($root, array('nkwelle-ephraim', 'headmaster', 'head-master'));
+$head_photo = emergence_photo($root, array('nkwelle-ephraim', 'nkwelle', 'kwelle', 'mr-kwelle', 'headmaster', 'head-master'));
 $vice_photo = emergence_photo($root, array('headmistress', 'head-mistress', 'simon-hermine', 'hermine'));
 $leaders = array(
     array('name' => $t['head_name'], 'role' => $t['head_role'], 'photo' => $head_photo, 'initials' => 'NE'),
