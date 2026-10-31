@@ -123,6 +123,7 @@ function emergence_labels($lang) {
             'credit' => 'Site par',
             'rights' => 'Tous droits réservés.',
             'whatsapp' => 'WhatsApp',
+            'follow' => 'Suivre l’école',
         );
     }
     return array(
@@ -155,7 +156,40 @@ function emergence_labels($lang) {
         'credit' => 'Site by',
         'rights' => 'All rights reserved.',
         'whatsapp' => 'WhatsApp',
+        'follow' => 'Follow the school',
     );
+}
+
+function emergence_social_row($wa) {
+    $links = array(
+        array(
+            'Facebook',
+            'https://www.facebook.com/emergenceschools',
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 8h-2a1 1 0 0 0-1 1v2h3l-.4 3H12v8H9v-8H7v-3h2V8.6A3.6 3.6 0 0 1 12.7 5H15v3z"/></svg>',
+        ),
+        array(
+            'Instagram',
+            'https://www.instagram.com/emergenceschools/',
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8a5 5 0 0 1 5-5zm8 2H8a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3zm-4 3.2A3.8 3.8 0 1 1 8.2 12 3.8 3.8 0 0 1 12 8.2zm0 2A1.8 1.8 0 1 0 13.8 12 1.8 1.8 0 0 0 12 10.2zM17.2 6.6a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/></svg>',
+        ),
+        array(
+            'LinkedIn',
+            'https://www.linkedin.com/company/emergence-bilingualnursery-and-primary-school/about/',
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 9H4V20h2.5zM5.2 4A1.6 1.6 0 1 0 5.2 7.2 1.6 1.6 0 0 0 5.2 4zM20 20h-2.5v-5.6c0-1.6-.6-2.6-2-2.6a2.1 2.1 0 0 0-2 1.4 2.6 2.6 0 0 0-.1.9V20H11V9h2.4v1.5a3.4 3.4 0 0 1 3-1.7c2.2 0 3.6 1.4 3.6 4.5z"/></svg>',
+        ),
+        array(
+            'WhatsApp',
+            $wa,
+            '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3zm5.2 12.7c-.2.6-1.2 1.1-1.7 1.2-.4.1-1 .1-1.6-.1-.4-.1-.9-.3-1.5-.5-2.6-1.1-4.3-3.8-4.4-4-.1-.2-1-1.3-1-2.5s.6-1.8.9-2 .5-.3.6-.3h.5c.1 0 .3 0 .4.4.2.5.6 1.6.6 1.7.1.1 0 .3 0 .4l-.2.3-.3.4c-.1.1-.2.3-.1.4.1.2.6 1 1.3 1.6.9.8 1.6 1 1.8 1.1.2.1.3.1.4 0l.6-.7c.1-.2.3-.1.5-.1l1.5.7c.2.1.3.1.4.2.1.2.1.7-.1 1.3z"/></svg>',
+        ),
+    );
+    echo '<div class="socials">';
+    foreach ($links as $link) {
+        echo '<a class="social" href="' . e($link[1]) . '" rel="noopener" aria-label="' . e($link[0]) . '">';
+        echo $link[2];
+        echo '<span>' . e($link[0]) . '</span></a>';
+    }
+    echo '</div>';
 }
 
 function emergence_header($ctx, $active) {
@@ -262,13 +296,8 @@ function emergence_footer($ctx, $wa) {
                     </ul>
                 </div>
                 <div>
-                    <h3><?php echo e($n['foot_visit']); ?></h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/emergenceschools" rel="noopener">Facebook</a></li>
-                        <li><a href="https://www.instagram.com/emergenceschools/" rel="noopener">Instagram</a></li>
-                        <li><a href="https://www.linkedin.com/company/emergence-bilingualnursery-and-primary-school/about/" rel="noopener">LinkedIn</a></li>
-                        <li><a href="<?php echo e($wa); ?>"><?php echo e($n['whatsapp']); ?></a></li>
-                    </ul>
+                    <h3><?php echo e($n['follow']); ?></h3>
+                    <?php emergence_social_row($wa); ?>
                     <h3 class="footer-next"><?php echo e($n['portals']); ?></h3>
                     <ul>
                         <li><a href="<?php echo e($root); ?>/student/login.php"><?php echo e($n['student']); ?></a></li>

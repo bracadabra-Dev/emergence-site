@@ -74,7 +74,7 @@ $copy = array(
         'story_p1' => 'Emergence Bilingual Nursery and Primary School was founded in September 1995 by Mme Ebai, née Hilda Kellen Fonka. The point was Cameroon’s two languages: a child should be able to live in either one.',
         'story_before' => 'Classes stay at 30 pupils or fewer, in airy rooms, with a nurse and a computer lab on this campus. The ',
         'story_link' => 'secondary section',
-        'story_after' => ' grew out of this school. It did not replace it.',
+        'story_after' => ' grew out of this school and opened on this campus in September 2023. It did not replace it.',
         'story_note' => 'At Common Entrance and the Concours d’entrée en 6ème, Emergence has recorded a full pass in almost every year it has presented candidates, and 97% in the one year that fell short.',
         'campus_caption' => 'Logbessou campus, 10th Avenue.',
         'campuses_kicker' => 'The campus',
@@ -192,7 +192,7 @@ $copy = array(
         'story_p1' => 'L’école maternelle et primaire bilingue Emergence a été fondée en septembre 1995 par Mme Ebai, née Hilda Kellen Fonka. Le propos tenait aux deux langues du Cameroun : un enfant doit pouvoir vivre dans l’une et dans l’autre.',
         'story_before' => 'Les classes restent à 30 élèves au plus, dans des salles aérées, avec une infirmerie et une salle informatique sur ce campus. Le ',
         'story_link' => 'secondaire',
-        'story_after' => ' est né de cette école. Il ne l’a pas remplacée.',
+        'story_after' => ' est né de cette école et a ouvert sur ce campus en septembre 2023. Il ne l’a pas remplacée.',
         'story_note' => 'Au Common Entrance et au concours d’entrée en 6e, Emergence a obtenu le plein de réussites presque chaque année où elle a présenté des candidats, et 97 % l’année qui a fait exception.',
         'campus_caption' => 'Campus de Logbessou, 10e avenue.',
         'campuses_kicker' => 'Le campus',
@@ -329,8 +329,8 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" imagesrcset="<?php echo e($img); ?>/hero-sm.webp 800w, <?php echo e($img); ?>/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=3">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=3">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=4">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=4">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -446,16 +446,10 @@ $schema = array(
         <div class="wrap">
             <p class="kicker"><?php echo e($t['life_kicker']); ?></p>
             <h2><?php echo e($t['life_title']); ?></h2>
-            <div class="bento">
-                <?php foreach ($gallery as $shot): ?>
-                    <figure class="<?php echo e($shot['class']); ?>">
-                        <a class="shot" href="<?php echo e($img . '/' . $shot['file']); ?>" data-alt="<?php echo e($t[$shot['key']]); ?>" aria-label="<?php echo e($t[$shot['key']]); ?>">
-                            <img src="<?php echo e($img . '/' . $shot['file']); ?>" width="<?php echo (int) $shot['w']; ?>" height="<?php echo (int) $shot['h']; ?>" alt="" loading="lazy" decoding="async">
-                        </a>
-                        <figcaption><?php echo e($t[$shot['key']]); ?></figcaption>
-                    </figure>
-                <?php endforeach; ?>
-            </div>
+            <figure class="moment moment-lead">
+                <img src="<?php echo e($img); ?>/culture.webp" width="1100" height="825" alt="<?php echo e($t['cap_culture']); ?>" loading="lazy" decoding="async">
+                <figcaption><strong><?php echo e($t['cap_culture']); ?></strong></figcaption>
+            </figure>
         </div>
     </section>
 

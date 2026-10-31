@@ -57,7 +57,7 @@ $copy = array(
         'secondary_card' => 'Secondary',
         'secondary_card_text' => 'Anglophone and French streams, through GCE, BEPC, Probatoire and the Baccalauréat.',
         'staff_kicker' => 'People',
-        'staff_title' => 'The people who keep the schools.',
+        'staff_title' => 'The people who keep the school.',
         'staff_intro' => 'Names and roles as the school publishes them. Initials stand in where a portrait is not ready yet.',
         'all_staff' => 'Full staff list',
         'visit_kicker' => 'Visit',
@@ -124,7 +124,7 @@ $copy = array(
         'secondary_card' => 'Secondaire',
         'secondary_card_text' => 'Voies anglophone et française, jusqu’au GCE, au BEPC, au Probatoire et au Baccalauréat.',
         'staff_kicker' => 'Les personnes',
-        'staff_title' => 'Celles et ceux qui tiennent les écoles.',
+        'staff_title' => 'Celles et ceux qui tiennent l’école.',
         'staff_intro' => 'Noms et fonctions tels que l’école les publie. Les initiales tiennent lieu de portrait tant que la photo n’est pas prête.',
         'all_staff' => 'Toute l’équipe',
         'visit_kicker' => 'Venir',
@@ -155,6 +155,31 @@ $copy = array(
 );
 
 $t = $copy[$lang];
+$secimg = $root . '/assets/images/secondary';
+$moments = $lang === 'fr' ? array(
+    array($img . '/hero.webp', 'Graduation de maternelle', 'La première cérémonie.'),
+    array($img . '/culture.webp', 'Journée culturelle', 'Danse, dans les plus jeunes classes.'),
+    array($secimg . '/basketball.webp', 'Basket', 'Le sport du secondaire, sur le terrain.'),
+    array($secimg . '/visit.webp', 'Une visite', 'Des élèves reçoivent un hôte.'),
+    array($img . '/medals.webp', 'Une journée d’école', 'Le personnel, aux couleurs de l’école.'),
+    array($img . '/campus.webp', 'Le campus', '10e avenue, Logbessou.'),
+    array($secimg . '/staff.webp', 'L’équipe', 'Devant l’école.'),
+    array($img . '/flyer-fr.webp', 'Le dépliant', 'L’année, sur une feuille.'),
+    array($img . '/flyer-en.webp', 'La version anglaise', 'Le même dépliant, en anglais.'),
+) : array(
+    array($img . '/hero.webp', 'Kindergarten graduation', 'The first ceremony.'),
+    array($img . '/culture.webp', 'Cultural day', 'Dance, in the younger classes.'),
+    array($secimg . '/basketball.webp', 'Basketball', 'Secondary sport, on the yard.'),
+    array($secimg . '/visit.webp', 'A visit', 'Students receive a guest.'),
+    array($img . '/medals.webp', 'A school day', 'Staff, in the school colours.'),
+    array($img . '/campus.webp', 'The campus', '10th Avenue, Logbessou.'),
+    array($secimg . '/staff.webp', 'The team', 'In front of the school.'),
+    array($img . '/flyer-fr.webp', 'The flyer', 'The year, on one sheet.'),
+    array($img . '/flyer-en.webp', 'The English sheet', 'The same flyer, in English.'),
+);
+$day_title = $lang === 'fr' ? 'La journée, image par image.' : 'The day, picture by picture.';
+$day_kicker = $lang === 'fr' ? 'La journée' : 'The school day';
+$gallery_link = $lang === 'fr' ? 'Toute la galerie' : 'The whole gallery';
 $wa = 'https://wa.me/237699353787?text=' . rawurlencode($t['wa_text']);
 
 $files = array(
@@ -215,7 +240,7 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="<?php echo e($img); ?>/hero-sm.webp" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=3">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=4">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -264,12 +289,26 @@ $schema = array(
         </div>
     </section>
 
+    <section class="band" id="day">
+        <div class="wrap">
+            <p class="kicker"><?php echo e($day_kicker); ?></p>
+            <h2><?php echo e($day_title); ?></h2>
+            <div class="moments">
+                <?php foreach ($moments as $i => $moment): ?>
+                    <figure class="moment<?php echo $i === 0 ? ' moment-lead' : ''; ?>">
+                        <img src="<?php echo e($moment[0]); ?>" alt="<?php echo e($moment[1] . '. ' . $moment[2]); ?>" width="1200" height="900" loading="<?php echo $i === 0 ? 'eager' : 'lazy'; ?>" decoding="async">
+                        <figcaption><strong><?php echo e($moment[1]); ?></strong> <?php echo e($moment[2]); ?></figcaption>
+                    </figure>
+                <?php endforeach; ?>
+            </div>
+            <div class="actions">
+                <a class="btn btn-line" href="<?php echo e($page); ?>/gallery.php"><?php echo e($gallery_link); ?></a>
+            </div>
+        </div>
+    </section>
+
     <section class="band band-alt" id="academic">
-        <div class="wrap pillar">
-            <figure>
-                <img src="<?php echo e($img); ?>/corridor.webp" width="1100" height="619" alt="<?php echo e($t['academic_alt']); ?>" loading="lazy" decoding="async">
-                <figcaption><?php echo e($t['academic_cap']); ?></figcaption>
-            </figure>
+        <div class="wrap">
             <div class="pillar-copy">
                 <p class="kicker"><?php echo e($t['academic_kicker']); ?></p>
                 <h2><?php echo e($t['academic_title']); ?></h2>
@@ -283,11 +322,7 @@ $schema = array(
     </section>
 
     <section class="band" id="physical">
-        <div class="wrap pillar reverse">
-            <figure>
-                <img src="<?php echo e($root); ?>/assets/images/secondary/basketball.webp" width="1600" height="1067" alt="<?php echo e($t['physical_alt']); ?>" loading="lazy" decoding="async">
-                <figcaption><?php echo e($t['physical_cap']); ?></figcaption>
-            </figure>
+        <div class="wrap">
             <div class="pillar-copy">
                 <p class="kicker"><?php echo e($t['physical_kicker']); ?></p>
                 <h2><?php echo e($t['physical_title']); ?></h2>
@@ -301,11 +336,7 @@ $schema = array(
     </section>
 
     <section class="band band-alt" id="mental">
-        <div class="wrap pillar">
-            <figure>
-                <img src="<?php echo e($img); ?>/medals.webp" width="1400" height="1050" alt="<?php echo e($t['mental_alt']); ?>" loading="lazy" decoding="async">
-                <figcaption><?php echo e($t['mental_cap']); ?></figcaption>
-            </figure>
+        <div class="wrap">
             <div class="pillar-copy">
                 <p class="kicker"><?php echo e($t['mental_kicker']); ?></p>
                 <h2><?php echo e($t['mental_title']); ?></h2>
@@ -341,6 +372,8 @@ $schema = array(
             <div class="actions">
                 <a class="btn btn-line" href="<?php echo e($page); ?>/staff.php"><?php echo e($t['all_staff']); ?></a>
             </div>
+            <h3 class="follow-label"><?php echo e(emergence_labels($lang)['follow']); ?></h3>
+            <?php emergence_social_row($wa); ?>
         </div>
     </section>
 

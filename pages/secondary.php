@@ -46,7 +46,7 @@ $copy = array(
         'jump_streams' => 'Streams',
         'jump_exams' => 'Exams',
         'jump_guide' => 'Guidance',
-        'jump_life' => 'Life',
+        'jump_life' => 'Facilities',
         'jump_clubs' => 'Clubs',
         'jump_lead' => 'Leadership',
         'story_kicker' => 'On this campus',
@@ -93,8 +93,16 @@ $copy = array(
         'guide_text' => 'A counselling and orientation bureau watches how each student is getting on. It helps with the course to apply for, the place, and the deadline, and it stays with the application. The school sends the universities a student chooses a clear account of the subjects studied. It names links with universities in Canada, the United Kingdom, New Zealand, the United States and Australia.',
         'guide_alt' => 'Students in uniform during a visit at Logbessou.',
         'guide_cap' => 'A visit along the corridor.',
-        'life_kicker' => 'Life on campus',
-        'life_title' => 'Sport, a visit, and the people who teach.',
+        'life_kicker' => 'The building',
+        'life_title' => 'What the secondary school has.',
+        'facilities' => array(
+            array('Classrooms', 'Air-conditioned rooms, a whiteboard, and at most 25 students in a class.'),
+            array('Laboratories', 'Three computer laboratories. Biology, chemistry and physics, each with a screen for the demonstration. A geology laboratory with the rocks and minerals the course needs.'),
+            array('Library and gymnasium', 'A quiet room for reading, and a gymnasium for sport.'),
+            array('The canteen', 'A supervised kitchen. Meals, pastries, and four screens in the hall.'),
+            array('Research', 'Internet for an exposé, and projectors when a class presents its work.'),
+            array('The first year', 'The section opened on this campus in September 2023. That first year recorded a full pass in both streams.'),
+        ),
         'cap_sport' => 'Basketball on the yard.',
         'cap_visit' => 'Students during a visit.',
         'cap_staff' => 'The team in front of the school.',
@@ -149,7 +157,7 @@ $copy = array(
         'jump_streams' => 'Voies',
         'jump_exams' => 'Examens',
         'jump_guide' => 'Orientation',
-        'jump_life' => 'La vie',
+        'jump_life' => 'Le bâtiment',
         'jump_clubs' => 'Clubs',
         'jump_lead' => 'Direction',
         'story_kicker' => 'Sur ce campus',
@@ -196,8 +204,16 @@ $copy = array(
         'guide_text' => 'Un bureau d’orientation suit l’évolution de chaque élève. Il aide pour la filière, le lieu et la date limite, et il reste avec le dossier. L’école envoie aux universités choisies un compte clair des matières étudiées. Elle cite des liens avec des universités au Canada, au Royaume-Uni, en Nouvelle-Zélande, aux États-Unis et en Australie.',
         'guide_alt' => 'Des élèves en uniforme lors d’une visite à Logbessou.',
         'guide_cap' => 'Une visite dans le couloir.',
-        'life_kicker' => 'La vie du campus',
-        'life_title' => 'Le sport, une visite, et celles et ceux qui enseignent.',
+        'life_kicker' => 'Le bâtiment',
+        'life_title' => 'Ce que le secondaire a.',
+        'facilities' => array(
+            array('Les salles', 'Des salles climatisées, un tableau blanc, et 25 élèves au plus par classe.'),
+            array('Les laboratoires', 'Trois salles informatiques. Biologie, chimie et physique, chacune avec un écran pour la démonstration. Un laboratoire de géologie, avec les roches et les minéraux du cours.'),
+            array('Bibliothèque et gymnase', 'Une salle calme pour lire, et un gymnase pour le sport.'),
+            array('La cantine', 'Une cuisine surveillée. Des repas, des pâtisseries, et quatre écrans dans la salle.'),
+            array('La recherche', 'Internet pour un exposé, et des projecteurs quand une classe présente son travail.'),
+            array('La première année', 'La section a ouvert sur ce campus en septembre 2023. Cette première année a enregistré le plein de réussites dans les deux voies.'),
+        ),
         'cap_sport' => 'Le basket, sur le terrain.',
         'cap_visit' => 'Des élèves lors d’une visite.',
         'cap_staff' => 'L’équipe devant l’école.',
@@ -299,8 +315,8 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="<?php echo e($sec); ?>/basketball-sm.webp" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=3">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=3">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=4">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=4">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -437,14 +453,12 @@ $schema = array(
         <div class="wrap">
             <p class="kicker"><?php echo e($t['life_kicker']); ?></p>
             <h2><?php echo e($t['life_title']); ?></h2>
-            <div class="bento-sec">
-                <?php foreach ($gallery as $shot): ?>
-                    <figure class="<?php echo e($shot['class']); ?>">
-                        <a class="shot" href="<?php echo e($sec . '/' . $shot['file']); ?>" data-alt="<?php echo e($t[$shot['key']]); ?>" aria-label="<?php echo e($t[$shot['key']]); ?>">
-                            <img src="<?php echo e($sec . '/' . $shot['file']); ?>" width="<?php echo (int) $shot['w']; ?>" height="<?php echo (int) $shot['h']; ?>" alt="" loading="lazy" decoding="async">
-                        </a>
-                        <figcaption><?php echo e($t[$shot['key']]); ?></figcaption>
-                    </figure>
+            <div class="methods">
+                <?php foreach ($t['facilities'] as $facility): ?>
+                    <article class="card">
+                        <h3><?php echo e($facility[0]); ?></h3>
+                        <p><?php echo e($facility[1]); ?></p>
+                    </article>
                 <?php endforeach; ?>
             </div>
         </div>
