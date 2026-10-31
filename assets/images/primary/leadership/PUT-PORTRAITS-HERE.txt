@@ -1,0 +1,11 @@
+Drop-in portraits for the primary leadership. No code change.
+
+Mr Nkwelle Ephraim, Headmaster:
+  headmaster.webp is already in this folder.
+  assets/images/staff/nkwelle-ephraim.webp is the same portrait.
+
+Mme Simon Hermine, Headmistress:
+  Her portrait is already at assets/images/staff/hermine.webp.
+  headmistress.webp here replaces it if you want a new one.
+
+Same folder as this file. The page picks them up on the next load.
