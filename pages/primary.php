@@ -29,13 +29,13 @@ $img = $root . '/assets/images/primary';
 $places = array(
     'Deido', 'Bonamoussadi', 'Kotto', 'Lendi', 'Makepe', 'Omnisport', 'Nyalla',
     'PK 10', 'PK 12–21', 'Cité des Palmiers', 'Hôpital Général', 'Ndongbong',
-    'Logbessou', 'Logpom', 'Yassa', 'Japoma', 'Bangue', 'Bonapriso', 'Akwa', 'Mboppi',
+    'Logbessou', 'Logpom', 'Yassa', 'Japoma', 'Bangue', 'Akwa', 'Mboppi',
 );
 
 $copy = array(
     'en' => array(
         'meta_title' => 'Primary School — Emergence Schools',
-        'meta_desc' => 'Nursery and primary at Emergence Schools, Douala. Bilingual, French and Anglo-Saxon classes at Bonapriso and Logbessou since 1995.',
+        'meta_desc' => 'Nursery and primary at Emergence Logbessou, 10th Avenue, Douala. Bilingual, French and Anglo-Saxon classes on one campus.',
         'brand' => 'Emergence',
         'brand_sub' => 'Nursery & Primary',
         'home' => 'Home',
@@ -55,7 +55,7 @@ $copy = array(
         'skip' => 'Skip to content',
         'on_page' => 'On this page',
         'jump_school' => 'The school',
-        'jump_campuses' => 'Campuses',
+        'jump_campuses' => 'Campus',
         'jump_paths' => 'Pathways',
         'jump_class' => 'Classroom',
         'jump_life' => 'Life',
@@ -72,17 +72,13 @@ $copy = array(
         'story_kicker' => 'Since 1995',
         'story_title' => 'A primary school first.',
         'story_p1' => 'Emergence Bilingual Nursery and Primary School was founded in September 1995 by Mme Ebai, née Hilda Kellen Fonka. The point was Cameroon’s two languages: a child should be able to live in either one.',
-        'story_before' => 'Classes stay at 30 pupils or fewer, in airy rooms, with a nurse and a computer lab on both campuses. The ',
+        'story_before' => 'Classes stay at 30 pupils or fewer, in airy rooms, with a nurse and a computer lab on this campus. The ',
         'story_link' => 'secondary section',
         'story_after' => ' grew out of this school. It did not replace it.',
         'story_note' => 'At Common Entrance and the Concours d’entrée en 6ème, Emergence has recorded a full pass in almost every year it has presented candidates, and 97% in the one year that fell short.',
         'campus_caption' => 'Logbessou campus, 10th Avenue.',
-        'campuses_kicker' => 'Campuses',
-        'campuses_title' => 'Bonapriso and Logbessou.',
-        'bona_name' => 'Bonapriso',
-        'bona_role' => 'Nursery and primary.',
-        'bona_since' => 'Since September 1995',
-        'bona_addr' => 'Near Paroisse Dominique Savio, Douala',
+        'campuses_kicker' => 'The campus',
+        'campuses_title' => 'Logbessou, 10th Avenue.',
         'log_name' => 'Logbessou',
         'log_role' => 'Nursery, primary, and the step into secondary.',
         'log_since' => 'Since September 2006',
@@ -122,7 +118,7 @@ $copy = array(
         'care_kicker' => 'Around the child',
         'care_title' => 'Health, a watched gate, and a bus.',
         'cares' => array(
-            array('A nurse on both campuses', 'A professional nurse is present on each campus. When a child needs more than the infirmary, the school takes them to a known clinic.'),
+            array('A nurse on campus', 'A professional nurse is present. When a child needs more than the infirmary, the school takes them to a known clinic.'),
             array('A secure yard', 'Guards are on campus through the day and the night. New tables and chairs are already in the primary classrooms.'),
             array('Computers as a habit', 'A lab where a pupil can sit at a machine, educational software, and tablets so the work can continue at home.'),
         ),
@@ -142,7 +138,7 @@ $copy = array(
         'fly_en' => 'English flyer, Emergence Schools, Logbessou.',
         'fly_open' => 'Open full size',
         'cta_title' => 'Ask about a place in nursery or primary.',
-        'cta_text' => 'Say which campus and which class. Admissions for Bonapriso and Logbessou start with that conversation.',
+        'cta_text' => 'Say which class. Admissions at Logbessou start with that conversation.',
         'email' => 'Email the school',
         'hours' => 'Monday to Friday, 8:00–17:00',
         'foot_blurb' => 'Nursery and primary at Emergence Schools, Douala. The group also runs the secondary school.',
@@ -157,7 +153,7 @@ $copy = array(
     ),
     'fr' => array(
         'meta_title' => 'École primaire — École Emergence',
-        'meta_desc' => 'Maternelle et primaire à l’École Emergence, Douala. Sections bilingue, française et anglo-saxonne à Bonapriso et à Logbessou, depuis 1995.',
+        'meta_desc' => 'Maternelle et primaire à Emergence Logbessou, 10e avenue, Douala. Sections bilingue, française et anglo-saxonne sur un seul campus.',
         'brand' => 'Emergence',
         'brand_sub' => 'Maternelle et primaire',
         'home' => 'Accueil',
@@ -194,17 +190,13 @@ $copy = array(
         'story_kicker' => 'Depuis 1995',
         'story_title' => 'D’abord une école primaire.',
         'story_p1' => 'L’école maternelle et primaire bilingue Emergence a été fondée en septembre 1995 par Mme Ebai, née Hilda Kellen Fonka. Le propos tenait aux deux langues du Cameroun : un enfant doit pouvoir vivre dans l’une et dans l’autre.',
-        'story_before' => 'Les classes restent à 30 élèves au plus, dans des salles aérées, avec une infirmerie et une salle informatique sur les deux campus. Le ',
+        'story_before' => 'Les classes restent à 30 élèves au plus, dans des salles aérées, avec une infirmerie et une salle informatique sur ce campus. Le ',
         'story_link' => 'secondaire',
         'story_after' => ' est né de cette école. Il ne l’a pas remplacée.',
         'story_note' => 'Au Common Entrance et au concours d’entrée en 6e, Emergence a obtenu le plein de réussites presque chaque année où elle a présenté des candidats, et 97 % l’année qui a fait exception.',
         'campus_caption' => 'Campus de Logbessou, 10e avenue.',
-        'campuses_kicker' => 'Campus',
-        'campuses_title' => 'Bonapriso et Logbessou.',
-        'bona_name' => 'Bonapriso',
-        'bona_role' => 'Maternelle et primaire.',
-        'bona_since' => 'Depuis septembre 1995',
-        'bona_addr' => 'Près de la paroisse Dominique Savio, Douala',
+        'campuses_kicker' => 'Le campus',
+        'campuses_title' => 'Logbessou, 10e avenue.',
         'log_name' => 'Logbessou',
         'log_role' => 'Maternelle, primaire, et le passage vers le secondaire.',
         'log_since' => 'Depuis septembre 2006',
@@ -244,7 +236,7 @@ $copy = array(
         'care_kicker' => 'Autour de l’enfant',
         'care_title' => 'La santé, un portail surveillé, et le bus.',
         'cares' => array(
-            array('Une infirmerie sur les deux campus', 'Un professionnel de santé tient l’infirmerie. Quand un enfant a besoin de plus, l’école le conduit vers une clinique connue.'),
+            array('Une infirmerie sur le campus', 'Un professionnel de santé tient l’infirmerie. Quand un enfant a besoin de plus, l’école le conduit vers une clinique connue.'),
             array('Une cour surveillée', 'Des gardiens sont sur le campus le jour et la nuit. De nouvelles tables et de nouvelles chaises sont déjà dans les salles du primaire.'),
             array('L’ordinateur comme une habitude', 'Une salle où un élève peut s’asseoir devant une machine, des logiciels éducatifs, et des tablettes pour que le travail continue à la maison.'),
         ),
@@ -264,7 +256,7 @@ $copy = array(
         'fly_en' => 'Dépliant anglais, Emergence Schools, Logbessou.',
         'fly_open' => 'Ouvrir en grand',
         'cta_title' => 'Demander une place en maternelle ou au primaire.',
-        'cta_text' => 'Indiquez le campus et la classe. L’admission à Bonapriso ou à Logbessou commence par cette conversation.',
+        'cta_text' => 'Indiquez la classe. L’admission à Logbessou commence par cette conversation.',
         'email' => 'Écrire à l’école',
         'hours' => 'Lundi à vendredi, 8 h – 17 h',
         'foot_blurb' => 'Maternelle et primaire de l’École Emergence, à Douala. Le groupe comprend aussi le secondaire.',
@@ -309,18 +301,10 @@ $schema = array(
         'url' => $origin . $root . '/',
     ),
     'address' => array(
-        array(
-            '@type' => 'PostalAddress',
-            'streetAddress' => 'Near Paroisse Dominique Savio, Bonapriso',
-            'addressLocality' => 'Douala',
-            'addressCountry' => 'CM',
-        ),
-        array(
-            '@type' => 'PostalAddress',
-            'streetAddress' => '10th Avenue, Logbessou',
-            'addressLocality' => 'Douala',
-            'addressCountry' => 'CM',
-        ),
+        '@type' => 'PostalAddress',
+        'streetAddress' => '10th Avenue, Logbessou',
+        'addressLocality' => 'Douala',
+        'addressCountry' => 'CM',
     ),
 );
 ?>
@@ -345,8 +329,8 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" imagesrcset="<?php echo e($img); ?>/hero-sm.webp 800w, <?php echo e($img); ?>/hero.webp 1600w" imagesizes="100vw" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=2">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=2">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=3">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=3">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -408,16 +392,8 @@ $schema = array(
         <div class="wrap">
             <p class="kicker"><?php echo e($t['campuses_kicker']); ?></p>
             <h2><?php echo e($t['campuses_title']); ?></h2>
-            <div class="cards-2">
-                <article class="card">
-                    <p class="since"><?php echo e($t['bona_since']); ?></p>
-                    <h3><?php echo e($t['bona_name']); ?></h3>
-                    <p><?php echo e($t['bona_role']); ?></p>
-                    <p><?php echo e($t['bona_addr']); ?></p>
-                    <a class="phone-link" href="tel:+237675261440">+237 675 261 440</a>
-                    <p><a href="https://maps.google.com/?q=Bonapriso+Paroisse+Dominique+Savio+Douala" rel="noopener"><?php echo e($t['map']); ?></a></p>
-                </article>
-                <article class="card">
+            <div class="campuses solo">
+                <article class="campus-card">
                     <p class="since"><?php echo e($t['log_since']); ?></p>
                     <h3><?php echo e($t['log_name']); ?></h3>
                     <p><?php echo e($t['log_role']); ?></p>

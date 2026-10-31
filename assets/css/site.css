@@ -523,6 +523,8 @@ h1 { margin: 0 0 10px; font-size: clamp(1.8rem, 4vw, 2.7rem); max-width: 18ch; }
   gap: 16px;
 }
 
+.campuses.solo { grid-template-columns: minmax(0, 28rem); }
+
 .campus-card {
   background: var(--paper);
   border-radius: 16px;

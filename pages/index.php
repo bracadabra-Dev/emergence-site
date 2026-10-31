@@ -20,10 +20,10 @@ $canonical = $boot['canonical'];
 $copy = array(
     'en' => array(
         'meta_title' => 'Emergence Schools — Douala',
-        'meta_desc' => 'Nursery, primary and secondary in Douala. Academic, physical and mental excellence at Bonapriso and Logbessou since 1995.',
-        'hero_kicker' => 'Nursery, primary and secondary · Douala',
-        'hero_title' => 'Academic, physical and mental excellence, since 1995.',
-        'hero_lede' => 'Two campuses in Douala. Children learn in English and French, move every week, and grow up in a school their parents can actually reach.',
+        'meta_desc' => 'Nursery, primary and secondary at Emergence Logbessou, Douala. Academic, physical and mental excellence on one campus.',
+        'hero_kicker' => 'Nursery, primary and secondary · Logbessou',
+        'hero_title' => 'Academic, physical and mental excellence, at Logbessou.',
+        'hero_lede' => 'One campus in Logbessou. Children learn in English and French, move every week, and grow up in a school their parents can actually reach.',
         'hero_alt' => 'Young children at a kindergarten graduation, in school uniform.',
         'primary_btn' => 'Primary section',
         'secondary_btn' => 'Secondary',
@@ -32,8 +32,8 @@ $copy = array(
         'academic_kicker' => 'Academic',
         'academic_title' => 'The work of the classroom.',
         'academic_text' => 'Nursery opens bilingual. Primary then follows a French path or an Anglo-Saxon path. Secondary continues in two streams: the Cameroon GCE, and BEPC, Probatoire and the Baccalauréat. Each school has its own page.',
-        'academic_alt' => 'A visit along the primary corridor.',
-        'academic_cap' => 'The primary corridor.',
+        'academic_alt' => 'Students in uniform during a visit at Logbessou.',
+        'academic_cap' => 'A visit at Logbessou.',
         'paths' => 'Primary pathways',
         'streams' => 'Secondary streams',
         'sec_clubs' => 'Secondary clubs',
@@ -41,19 +41,19 @@ $copy = array(
         'physical_kicker' => 'Physical',
         'physical_title' => 'A body that is part of the timetable.',
         'physical_text' => 'The younger classes dance, practise karate and ballet, and play sport in the week. Secondary adds IT, science, arts, team sport and chess. Buses collect children from across Douala so the day can start on time.',
-        'physical_alt' => 'Children dancing in traditional dress on cultural day.',
-        'physical_cap' => 'Cultural day for the younger classes.',
+        'physical_alt' => 'Secondary students in the school basketball kit, on the yard at Logbessou.',
+        'physical_cap' => 'Basketball on the yard.',
         'life' => 'Life in primary',
         'mental_kicker' => 'Mental',
         'mental_title' => 'A child who is known.',
-        'mental_text' => 'The school’s line is Discipline – Hardwork – Success. In primary, pupils hold offices of their own and parents sit with teachers twice a year. In secondary, a counselling bureau follows each student toward a course and a university. A nurse is on both campuses.',
+        'mental_text' => 'The school’s line is Discipline – Hardwork – Success. In primary, pupils hold offices of their own and parents sit with teachers twice a year. In secondary, a counselling bureau follows each student toward a course and a university. A nurse is on the campus.',
         'mental_alt' => 'Staff together on a school day, in school colours.',
         'mental_cap' => 'Staff on a school day.',
         'care' => 'Care in primary',
-        'schools_kicker' => 'The two schools',
-        'schools_title' => 'One group, from the first classroom to secondary.',
+        'schools_kicker' => 'The school',
+        'schools_title' => 'Nursery, primary and secondary, on one campus.',
         'primary_card' => 'Primary',
-        'primary_card_text' => 'Nursery through Class 6 and CM2, at Bonapriso and Logbessou.',
+        'primary_card_text' => 'Nursery through Class 6 and CM2, at Logbessou.',
         'secondary_card' => 'Secondary',
         'secondary_card_text' => 'Anglophone and French streams, through GCE, BEPC, Probatoire and the Baccalauréat.',
         'staff_kicker' => 'People',
@@ -61,8 +61,7 @@ $copy = array(
         'staff_intro' => 'Names and roles as the school publishes them. Initials stand in where a portrait is not ready yet.',
         'all_staff' => 'Full staff list',
         'visit_kicker' => 'Visit',
-        'visit_title' => 'Bonapriso and Logbessou.',
-        'bona_text' => 'Near Paroisse Dominique Savio, since September 1995.',
+        'visit_title' => 'Logbessou.',
         'log_text' => '10th Avenue, since September 2006.',
         'hours' => 'Monday to Friday, 8:00–17:00',
         'roles' => array(
@@ -88,10 +87,10 @@ $copy = array(
     ),
     'fr' => array(
         'meta_title' => 'École Emergence — Douala',
-        'meta_desc' => 'Maternelle, primaire et secondaire à Douala. Excellence académique, physique et mentale à Bonapriso et à Logbessou, depuis 1995.',
-        'hero_kicker' => 'Maternelle, primaire et secondaire · Douala',
-        'hero_title' => 'L’excellence académique, physique et mentale, depuis 1995.',
-        'hero_lede' => 'Deux campus à Douala. Les enfants apprennent en anglais et en français, bougent chaque semaine, et grandissent dans une école que les parents peuvent joindre.',
+        'meta_desc' => 'Maternelle, primaire et secondaire à Emergence Logbessou, Douala. Excellence académique, physique et mentale sur un seul campus.',
+        'hero_kicker' => 'Maternelle, primaire et secondaire · Logbessou',
+        'hero_title' => 'L’excellence académique, physique et mentale, à Logbessou.',
+        'hero_lede' => 'Un seul campus à Logbessou. Les enfants apprennent en anglais et en français, bougent chaque semaine, et grandissent dans une école que les parents peuvent joindre.',
         'hero_alt' => 'De jeunes enfants en uniforme, lors d’une graduation de maternelle.',
         'primary_btn' => 'Section primaire',
         'secondary_btn' => 'Secondaire',
@@ -100,8 +99,8 @@ $copy = array(
         'academic_kicker' => 'Académique',
         'academic_title' => 'Le travail de la classe.',
         'academic_text' => 'La maternelle s’ouvre bilingue. Le primaire suit ensuite une voie française ou une voie anglo-saxonne. Le secondaire continue en deux voies : le GCE camerounais, et le BEPC, le Probatoire et le Baccalauréat. Chaque école a sa page.',
-        'academic_alt' => 'Une visite dans le couloir du primaire.',
-        'academic_cap' => 'Le couloir du primaire.',
+        'academic_alt' => 'Des élèves en uniforme lors d’une visite à Logbessou.',
+        'academic_cap' => 'Une visite à Logbessou.',
         'paths' => 'Parcours du primaire',
         'streams' => 'Voies du secondaire',
         'sec_clubs' => 'Clubs du secondaire',
@@ -109,19 +108,19 @@ $copy = array(
         'physical_kicker' => 'Physique',
         'physical_title' => 'Un corps qui fait partie de l’horaire.',
         'physical_text' => 'Les plus jeunes dansent, pratiquent le karaté et le ballet, et font du sport dans la semaine. Le secondaire ajoute l’informatique, les sciences, les arts, le sport d’équipe et les échecs. Les bus prennent les enfants dans Douala pour que la journée commence à l’heure.',
-        'physical_alt' => 'Des enfants dansent en tenue traditionnelle lors de la journée culturelle.',
-        'physical_cap' => 'Journée culturelle des plus jeunes classes.',
+        'physical_alt' => 'Des élèves du secondaire en tenue de basket, sur le terrain de Logbessou.',
+        'physical_cap' => 'Le basket, sur le terrain.',
         'life' => 'La vie au primaire',
         'mental_kicker' => 'Mental',
         'mental_title' => 'Un enfant que l’on connaît.',
-        'mental_text' => 'La ligne de l’école est Discipline – Hardwork – Success. Au primaire, les élèves tiennent leurs propres fonctions et les parents s’assoient avec les enseignants deux fois par an. Au secondaire, un bureau d’orientation suit chaque élève vers une filière et une université. Une infirmière est sur les deux campus.',
+        'mental_text' => 'La ligne de l’école est Discipline – Hardwork – Success. Au primaire, les élèves tiennent leurs propres fonctions et les parents s’assoient avec les enseignants deux fois par an. Au secondaire, un bureau d’orientation suit chaque élève vers une filière et une université. Une infirmière est sur le campus.',
         'mental_alt' => 'Le personnel ensemble lors d’une journée d’école, en couleurs de l’école.',
         'mental_cap' => 'Le personnel, un jour d’école.',
         'care' => 'L’accompagnement au primaire',
-        'schools_kicker' => 'Les deux écoles',
-        'schools_title' => 'Un seul groupe, de la première classe au secondaire.',
+        'schools_kicker' => 'L’école',
+        'schools_title' => 'Maternelle, primaire et secondaire, sur un seul campus.',
         'primary_card' => 'Primaire',
-        'primary_card_text' => 'De la maternelle à la Class 6 et au CM2, à Bonapriso et à Logbessou.',
+        'primary_card_text' => 'De la maternelle à la Class 6 et au CM2, à Logbessou.',
         'secondary_card' => 'Secondaire',
         'secondary_card_text' => 'Voies anglophone et française, jusqu’au GCE, au BEPC, au Probatoire et au Baccalauréat.',
         'staff_kicker' => 'Les personnes',
@@ -129,9 +128,8 @@ $copy = array(
         'staff_intro' => 'Noms et fonctions tels que l’école les publie. Les initiales tiennent lieu de portrait tant que la photo n’est pas prête.',
         'all_staff' => 'Toute l’équipe',
         'visit_kicker' => 'Venir',
-        'visit_title' => 'Bonapriso et Logbessou.',
-        'bona_text' => 'Près de la paroisse Dominique Savio, depuis septembre 1995.',
-        'log_text' => '10th Avenue, depuis septembre 2006.',
+        'visit_title' => 'Logbessou.',
+        'log_text' => '10e avenue, depuis septembre 2006.',
         'hours' => 'Lundi à vendredi, 8 h – 17 h',
         'roles' => array(
             'Directeur',
@@ -189,18 +187,10 @@ $schema = array(
     'telephone' => array('+237675261440', '+237676332046'),
     'slogan' => 'Discipline – Hardwork – Success',
     'address' => array(
-        array(
-            '@type' => 'PostalAddress',
-            'streetAddress' => 'Near Paroisse Dominique Savio, Bonapriso',
-            'addressLocality' => 'Douala',
-            'addressCountry' => 'CM',
-        ),
-        array(
-            '@type' => 'PostalAddress',
-            'streetAddress' => '10th Avenue, Logbessou',
-            'addressLocality' => 'Douala',
-            'addressCountry' => 'CM',
-        ),
+        '@type' => 'PostalAddress',
+        'streetAddress' => '10th Avenue, Logbessou',
+        'addressLocality' => 'Douala',
+        'addressCountry' => 'CM',
     ),
 );
 ?>
@@ -225,7 +215,7 @@ $schema = array(
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="<?php echo e($img); ?>/hero-sm.webp" fetchpriority="high">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=2">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=3">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -295,7 +285,7 @@ $schema = array(
     <section class="band" id="physical">
         <div class="wrap pillar reverse">
             <figure>
-                <img src="<?php echo e($img); ?>/culture.webp" width="1100" height="825" alt="<?php echo e($t['physical_alt']); ?>" loading="lazy" decoding="async">
+                <img src="<?php echo e($root); ?>/assets/images/secondary/basketball.webp" width="1600" height="1067" alt="<?php echo e($t['physical_alt']); ?>" loading="lazy" decoding="async">
                 <figcaption><?php echo e($t['physical_cap']); ?></figcaption>
             </figure>
             <div class="pillar-copy">
@@ -358,12 +348,7 @@ $schema = array(
         <div class="wrap">
             <p class="kicker"><?php echo e($t['visit_kicker']); ?></p>
             <h2><?php echo e($t['visit_title']); ?></h2>
-            <div class="campuses">
-                <article class="campus-card">
-                    <h3>Bonapriso</h3>
-                    <p><?php echo e($t['bona_text']); ?></p>
-                    <p><a href="tel:+237675261440">+237 675 261 440</a></p>
-                </article>
+            <div class="campuses solo">
                 <article class="campus-card">
                     <h3>Logbessou</h3>
                     <p><?php echo e($t['log_text']); ?></p>

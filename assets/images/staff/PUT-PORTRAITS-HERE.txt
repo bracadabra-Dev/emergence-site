@@ -8,10 +8,9 @@ Already published:
   blessing.webp   Mme Tim Blessing Kein
   hermine.webp    Mme Simon Hermine, Headmistress, Primary Section
 
+  nkwelle-ephraim.webp  Mr Nkwelle Ephraim, Headmaster, Primary Section
+
 Still waiting for a photograph:
   mbofa.webp           Mme Mbofa Regina Nchinda
-  nkwelle-ephraim.webp Mr Nkwelle Ephraim, Headmaster, Primary Section
-                       kwelle.webp, mr-kwelle.webp, or
-                       assets/images/primary/leadership/headmaster.webp also work
 
 webp, jpg, jpeg or png. The next page load picks the file up.

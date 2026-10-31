@@ -360,7 +360,21 @@ h1 {
 .g-celebration { grid-area: celebration; }
 .g-team { grid-area: team; }
 
-.bento figure {
+.bento-sec {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-areas:
+    "sport visit"
+    "sport staff";
+  gap: 12px;
+}
+
+.g-sport { grid-area: sport; min-height: 460px; }
+.g-visit { grid-area: visit; }
+.g-staff { grid-area: staff; }
+
+.bento figure,
+.bento-sec figure {
   position: relative;
   margin: 0;
   min-height: 220px;
@@ -387,7 +401,8 @@ h1 {
   object-fit: cover;
 }
 
-.bento figcaption {
+.bento figcaption,
+.bento-sec figcaption {
   position: absolute;
   left: 0;
   right: 0;
@@ -598,7 +613,13 @@ h1 {
       "corridor celebration"
       "team team";
   }
-  .g-culture, .g-team { min-height: 240px; }
+  .g-culture, .g-team, .g-sport { min-height: 240px; }
+  .bento-sec {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "sport sport"
+      "visit staff";
+  }
 }
 
 @media (max-width: 640px) {
@@ -606,6 +627,7 @@ h1 {
   .section { padding: 48px 0; }
   .leaders { grid-template-columns: 1fr; max-width: 320px; margin-inline: auto; }
   .bento { grid-template-columns: 1fr; grid-template-areas: "culture" "corridor" "celebration" "team"; }
+  .bento-sec { grid-template-columns: 1fr; grid-template-areas: "sport" "visit" "staff"; }
   .balance { flex-direction: column; }
   h1 { max-width: none; }
 }
