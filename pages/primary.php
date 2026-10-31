@@ -293,7 +293,7 @@ $schema = array(
     '@type' => 'EducationalOrganization',
     'name' => $lang === 'fr' ? 'École maternelle et primaire Emergence' : 'Emergence Nursery and Primary',
     'url' => $canonical,
-    'email' => 'dany.kengne@emergenceschools.org',
+    'email' => 'emergencecare@emergenceschools.org',
     'telephone' => array('+237675261440', '+237676332046'),
     'parentOrganization' => array(
         '@type' => 'EducationalOrganization',
@@ -551,11 +551,11 @@ $schema = array(
             <div>
                 <h2 id="cta-title"><?php echo e($t['cta_title']); ?></h2>
                 <p><?php echo e($t['cta_text']); ?></p>
-                <p class="hours"><?php echo e($t['hours']); ?> · dany.kengne@emergenceschools.org</p>
+                <p class="hours"><?php echo e($t['hours']); ?> · emergencecare@emergenceschools.org</p>
             </div>
             <div class="actions">
                 <a class="btn btn-yellow" href="<?php echo e($page); ?>/admissions.php"><?php echo e($t['apply']); ?></a>
-                <a class="btn btn-line" href="mailto:dany.kengne@emergenceschools.org"><?php echo e($t['email']); ?></a>
+                <a class="btn btn-line" href="mailto:emergencecare@emergenceschools.org"><?php echo e($t['email']); ?></a>
                 <a class="btn btn-line" href="<?php echo e($page); ?>/contact.php"><?php echo e($t['contact']); ?></a>
             </div>
         </section>

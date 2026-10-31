@@ -44,6 +44,7 @@ $copy = array(
         'jump_school' => 'The school',
         'jump_campus' => 'Campus',
         'jump_streams' => 'Streams',
+        'jump_class' => 'The lesson',
         'jump_exams' => 'Exams',
         'jump_guide' => 'Guidance',
         'jump_life' => 'Facilities',
@@ -54,6 +55,15 @@ $copy = array(
         'story_p1' => 'The secondary school shares 10th Avenue with the nursery and the primary. Students stay in a school they already know. The work gets harder: examinations, a course to choose, and a university to aim at.',
         'story_p2' => 'Digital work, as required by MINESEC, sits in both streams. Practical sessions, research and dissertation writing sit beside the timetable.',
         'story_note' => 'The school is a BEPC written sub-centre and a GCE registration centre.',
+        'lesson_alt' => 'Secondary students in navy uniform writing at their desks during a lesson.',
+        'lesson_cap' => 'A lesson, at the desks.',
+        'class_kicker' => 'In class',
+        'class_title' => 'Write it, then correct it.',
+        'class_intro' => 'Secondary students work at their desks, then go over the assignment at the board. The computer room is part of the same day. A poster on that wall asks how they will use what they learn.',
+        'lab_alt' => 'A teacher helps two students at a computer. The wall poster reads, How will you use Google?',
+        'lab_cap' => 'The computer room.',
+        'board_alt' => 'A teacher at the whiteboard correcting an assignment, with the class seated behind.',
+        'board_cap' => 'Correcting the assignment.',
         'campus_caption' => 'The Logbessou campus, 10th Avenue.',
         'campus_kicker' => 'The campus',
         'campus_title' => '10th Avenue, Logbessou.',
@@ -155,6 +165,7 @@ $copy = array(
         'jump_school' => 'L’école',
         'jump_campus' => 'Campus',
         'jump_streams' => 'Voies',
+        'jump_class' => 'Le cours',
         'jump_exams' => 'Examens',
         'jump_guide' => 'Orientation',
         'jump_life' => 'Le bâtiment',
@@ -165,6 +176,15 @@ $copy = array(
         'story_p1' => 'Le secondaire partage la 10e avenue avec la maternelle et le primaire. Les élèves restent dans une école qu’ils connaissent déjà. Le travail devient plus exigeant : les examens, une filière à choisir, une université à viser.',
         'story_p2' => 'Le numérique, comme le demande le MINESEC, est dans les deux voies. Les séances pratiques, la recherche et la dissertation accompagnent l’horaire.',
         'story_note' => 'L’école est un sous-centre d’écrit du BEPC et un centre d’inscription au GCE.',
+        'lesson_alt' => 'Des élèves du secondaire en uniforme bleu marine écrivent à leur table pendant un cours.',
+        'lesson_cap' => 'Un cours, aux tables.',
+        'class_kicker' => 'En classe',
+        'class_title' => 'L’écrire, puis le corriger.',
+        'class_intro' => 'Les élèves du secondaire travaillent à leur table, puis reprennent le devoir au tableau. La salle informatique fait partie de la même journée. Une affiche sur ce mur demande comment ils utiliseront ce qu’ils apprennent.',
+        'lab_alt' => 'Un enseignant aide deux élèves devant un ordinateur. L’affiche au mur demande : How will you use Google ?',
+        'lab_cap' => 'La salle informatique.',
+        'board_alt' => 'Un enseignant au tableau blanc corrige un devoir, la classe assise derrière.',
+        'board_cap' => 'La correction du devoir.',
         'campus_caption' => 'Le campus de Logbessou, 10e avenue.',
         'campus_kicker' => 'Le campus',
         'campus_title' => '10e avenue, Logbessou.',
@@ -279,7 +299,7 @@ $schema = array(
     '@type' => 'EducationalOrganization',
     'name' => $lang === 'fr' ? 'École secondaire Emergence Logbessou' : 'Emergence Secondary School, Logbessou',
     'url' => $canonical,
-    'email' => 'dany.kengne@emergenceschools.org',
+    'email' => 'emergencecare@emergenceschools.org',
     'telephone' => '+237676332046',
     'parentOrganization' => array(
         '@type' => 'EducationalOrganization',
@@ -316,7 +336,7 @@ $schema = array(
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preload" as="image" href="<?php echo e($sec); ?>/basketball-sm.webp" fetchpriority="high">
     <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/site.css?v=4">
-    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=4">
+    <link rel="stylesheet" href="<?php echo e($root); ?>/assets/css/primary.css?v=5">
     <script type="application/ld+json"><?php echo json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); ?></script>
 </head>
 <body data-lang-api="<?php echo e($root); ?>/api/language.php">
@@ -352,6 +372,7 @@ $schema = array(
             <a href="#story"><?php echo e($t['jump_school']); ?></a>
             <a href="#campus"><?php echo e($t['jump_campus']); ?></a>
             <a href="#streams"><?php echo e($t['jump_streams']); ?></a>
+            <a href="#lesson"><?php echo e($t['jump_class']); ?></a>
             <a href="#exams"><?php echo e($t['jump_exams']); ?></a>
             <a href="#guidance"><?php echo e($t['jump_guide']); ?></a>
             <a href="#life"><?php echo e($t['jump_life']); ?></a>
@@ -370,8 +391,8 @@ $schema = array(
                 <p class="note"><?php echo e($t['story_note']); ?></p>
             </div>
             <figure class="frame">
-                <img src="<?php echo e($img); ?>/campus.webp" width="1400" height="1050" alt="<?php echo e($t['campus_caption']); ?>" loading="lazy" decoding="async">
-                <figcaption><?php echo e($t['campus_caption']); ?></figcaption>
+                <img src="<?php echo e($sec); ?>/lesson.webp" width="1600" height="1066" alt="<?php echo e($t['lesson_alt']); ?>" loading="lazy" decoding="async">
+                <figcaption><?php echo e($t['lesson_cap']); ?></figcaption>
             </figure>
         </div>
     </section>
@@ -420,7 +441,25 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section section-alt" id="exams">
+    <section class="section section-alt" id="lesson">
+        <div class="wrap">
+            <p class="kicker"><?php echo e($t['class_kicker']); ?></p>
+            <h2><?php echo e($t['class_title']); ?></h2>
+            <p class="intro"><?php echo e($t['class_intro']); ?></p>
+            <div class="frames-2">
+                <figure class="frame">
+                    <img src="<?php echo e($sec); ?>/lab.webp" width="1280" height="854" alt="<?php echo e($t['lab_alt']); ?>" loading="lazy" decoding="async">
+                    <figcaption><?php echo e($t['lab_cap']); ?></figcaption>
+                </figure>
+                <figure class="frame">
+                    <img src="<?php echo e($sec); ?>/board.webp" width="1600" height="1066" alt="<?php echo e($t['board_alt']); ?>" loading="lazy" decoding="async">
+                    <figcaption><?php echo e($t['board_cap']); ?></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="exams">
         <div class="wrap">
             <p class="kicker"><?php echo e($t['exam_kicker']); ?></p>
             <h2><?php echo e($t['exam_title']); ?></h2>
@@ -435,7 +474,7 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section" id="guidance">
+    <section class="section section-alt" id="guidance">
         <div class="wrap story">
             <div>
                 <p class="kicker"><?php echo e($t['guide_kicker']); ?></p>
@@ -449,7 +488,7 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section section-alt" id="life">
+    <section class="section" id="life">
         <div class="wrap">
             <p class="kicker"><?php echo e($t['life_kicker']); ?></p>
             <h2><?php echo e($t['life_title']); ?></h2>
@@ -464,7 +503,7 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section" id="clubs">
+    <section class="section section-alt" id="clubs">
         <div class="wrap">
             <p class="kicker"><?php echo e($t['clubs_kicker']); ?></p>
             <h2><?php echo e($t['clubs_title']); ?></h2>
@@ -477,7 +516,7 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section section-alt" id="care">
+    <section class="section" id="care">
         <div class="wrap">
             <p class="kicker"><?php echo e($t['care_kicker']); ?></p>
             <h2><?php echo e($t['care_title']); ?></h2>
@@ -501,7 +540,7 @@ $schema = array(
         </div>
     </section>
 
-    <section class="section" id="leadership">
+    <section class="section section-alt" id="leadership">
         <div class="wrap">
             <p class="kicker"><?php echo e($t['lead_kicker']); ?></p>
             <h2><?php echo e($t['lead_title']); ?></h2>
@@ -529,11 +568,11 @@ $schema = array(
             <div>
                 <h2 id="cta-title"><?php echo e($t['cta_title']); ?></h2>
                 <p><?php echo e($t['cta_text']); ?></p>
-                <p class="hours"><?php echo e($t['hours']); ?> · dany.kengne@emergenceschools.org</p>
+                <p class="hours"><?php echo e($t['hours']); ?> · emergencecare@emergenceschools.org</p>
             </div>
             <div class="actions">
                 <a class="btn btn-yellow" href="<?php echo e($page); ?>/admissions.php"><?php echo e($t['apply']); ?></a>
-                <a class="btn btn-line" href="mailto:dany.kengne@emergenceschools.org"><?php echo e($t['email']); ?></a>
+                <a class="btn btn-line" href="mailto:emergencecare@emergenceschools.org"><?php echo e($t['email']); ?></a>
                 <a class="btn btn-line" href="<?php echo e($page); ?>/primary.php"><?php echo e($t['primary_link']); ?></a>
             </div>
         </section>

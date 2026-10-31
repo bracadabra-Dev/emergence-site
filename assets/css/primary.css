@@ -244,6 +244,12 @@ h1 {
   color: var(--muted);
 }
 
+.frames-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
 .note {
   margin: 8px 0 0;
   padding: 14px 16px;
@@ -601,7 +607,7 @@ h1 {
 }
 
 @media (max-width: 860px) {
-  .story, .cards-2, .cards-3, .methods, .split, .care-grid, .flyers, .cta, .footer-grid {
+  .story, .cards-2, .cards-3, .methods, .split, .care-grid, .flyers, .cta, .footer-grid, .frames-2 {
     grid-template-columns: 1fr;
   }
 

@@ -208,7 +208,7 @@ $schema = array(
     '@type' => 'EducationalOrganization',
     'name' => 'Emergence Schools',
     'url' => $canonical,
-    'email' => 'dany.kengne@emergenceschools.org',
+    'email' => 'emergencecare@emergenceschools.org',
     'telephone' => array('+237675261440', '+237676332046'),
     'slogan' => 'Discipline – Hardwork – Success',
     'address' => array(
@@ -388,7 +388,7 @@ $schema = array(
                     <p><a href="tel:+237676332046">+237 676 332 046</a></p>
                 </article>
             </div>
-            <p class="motto"><?php echo e($t['hours']); ?> · dany.kengne@emergenceschools.org</p>
+            <p class="motto"><?php echo e($t['hours']); ?> · emergencecare@emergenceschools.org</p>
         </div>
     </section>
 

@@ -53,7 +53,7 @@ emergence_portal_begin($boot, $title, $desc, 'contact');
                     <p><?php echo $lang === 'fr' ? '10e avenue, Douala' : '10th Avenue, Douala'; ?></p>
                     <p><a class="phone-link" href="tel:+237676332046">+237 676 332 046</a></p>
                     <p><a class="phone-link" href="tel:+237675261440">+237 675 261 440</a></p>
-                    <p><a href="mailto:dany.kengne@emergenceschools.org">dany.kengne@emergenceschools.org</a></p>
+                    <p><a href="mailto:emergencecare@emergenceschools.org">emergencecare@emergenceschools.org</a></p>
                     <p><a href="https://maps.google.com/?q=Logbessou+10th+Avenue+Douala+Cameroon" rel="noopener"><?php echo $lang === 'fr' ? 'Carte' : 'Map'; ?></a></p>
                 </article>
                 <h3 class="follow-label"><?php echo e(emergence_labels($lang)['follow']); ?></h3>
